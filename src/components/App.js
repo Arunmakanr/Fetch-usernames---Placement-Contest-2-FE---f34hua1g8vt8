@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/App.css';
 import { useState, useEffect } from 'react';
-import { PrefetchPlugin } from 'webpack';
 const App = () => {
 //code here 
 const [name,setName] = useState([]);
