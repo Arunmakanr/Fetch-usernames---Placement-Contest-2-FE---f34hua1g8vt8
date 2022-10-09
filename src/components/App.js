@@ -10,7 +10,7 @@ useEffect(()=>{
   fetch(`https://content.newtonschool.co/v1/pr/main/user/${id}`)
     .then((res)=>res.json())
     .then(data=>{
-//     console.log(data);
+    console.log(data);
     setName(data)
   })
 },[id])
