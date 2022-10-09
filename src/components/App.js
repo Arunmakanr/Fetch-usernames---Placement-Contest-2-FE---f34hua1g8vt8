@@ -4,12 +4,14 @@ import { useState, useEffect } from 'react';
 import { PrefetchPlugin } from 'webpack';
 const App = () => {
 //code here 
-const [name,setName] = useState("");
+const [name,setName] = useState([]);
 const [id,setId] = useState(1);
 useEffect(()=>{
-  fetch(`https://content.newtonschool.co/v1/pr/main/user/${id}`).then((resp)=>resp.json()).then((data)=>{
-//     console.log(data.name);
-    setName(data.name)
+  fetch(`https://content.newtonschool.co/v1/pr/main/user/${id}`)
+    .then((res)=>res.json())
+    .then(data=>{
+//     console.log(data);
+    setName(data)
   })
 },[id])
 const changeInput =(e)=>{
