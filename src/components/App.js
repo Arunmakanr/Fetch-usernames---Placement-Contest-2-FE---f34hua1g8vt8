@@ -3,19 +3,16 @@ import '../styles/App.css';
 import { useState, useEffect } from 'react';
 const App = () => {
 //code here 
-const [name,setName] = useState([]);
-const [id,setId] = useState(1);
+const [name,setname] = useState([]);
+const [id,setid] = useState(1);
 useEffect(()=>{
   fetch(`https://content.newtonschool.co/v1/pr/main/user/${id}`)
     .then((res)=>res.json())
     .then(data=>{
     console.log(data);
-    setName(data)
-  })
+    setname(data)})
 },[id])
-const changeInput =(e)=>{
-  setId(e.target.value)
-}
+ 
 
   return (
     <div className="App">
